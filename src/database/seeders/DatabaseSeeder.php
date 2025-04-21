@@ -13,8 +13,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call([
-            UserWithWeightDataSeeder::class,
-        ]);
+        $this->call(WeightLogsTableSeeder::class);
     }
 }

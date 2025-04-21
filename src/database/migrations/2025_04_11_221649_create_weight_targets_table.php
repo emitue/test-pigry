@@ -17,6 +17,7 @@ class CreateWeightTargetsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->decimal('target_weight', 4, 1);
+            $table->date('target_date');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

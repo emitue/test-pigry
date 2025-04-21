@@ -140,4 +140,8 @@ class WeightLogController extends Controller
 
         return redirect('admin');
     }
+    public function login()
+    {
+        return view('admin');
+    }
 }

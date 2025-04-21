@@ -15,8 +15,9 @@ class WeightTargetFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => User::factory(),
+            'user_id' => 1,
             'target_weight' => $this->faker->randomFloat(1, 50, 65),
+            'target_date' => $this->faker->dateTimeBetween('now', '+3 months')->format('Y-m-d'),
         ];
     }
 }

@@ -4,7 +4,7 @@ PiGLy
 
 Dockerビルド
 
-1.git clone 
+1.git clone
 2.cd coachtech/laravel
 3.DockerDesktopアプリを立ち上げる
 4.docker-compose up -d --build
@@ -34,4 +34,9 @@ php artisan key:generate
 php artisan migrate
 
 7.シーディングの実行
-php artisan storage:link
+php artisan db:seed
+
+使用技術
+・PHP8.3.0
+・Laravel8.83.27
+・MySQL8.0.26

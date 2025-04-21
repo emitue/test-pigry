@@ -22,3 +22,228 @@
   color: #666;
   margin-bottom: 5px;
 }
+
+/* ---------- 検索フォーム全体 ---------- */
+.admin__inner {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+/* 横並びにするラッパー */
+.search-and-add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  /* スマホで折り返し */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* 検索フォーム側 */
+.search-form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* 検索フォーム（from, to, 検索ボタン） */
+.search-form__date input[type="date"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
+.search-form__date-btn {
+  background-color: #888;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-form__date-btn:hover {
+  background-color: #666;
+}
+
+.date-separator {
+  display: inline-block;
+  margin: 0 8px;
+  font-size: 18px;
+  color: #555;
+}
+
+/* リセットボタン */
+.search-form__reset-btn {
+  background-color: #ddd;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+}
+
+.search-form__reset-btn:hover {
+  background-color: #bbb;
+}
+
+/* ---------- データ追加ボタン ---------- */
+.add-data {
+  margin-left: auto;
+}
+
+.add-fate__btn {
+  background-color: linear-gradient(#A3A6E1, #FFABD9);
+  color: black;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.add-fate__btn:hover {
+  background-color: #aaa;
+}
+
+/* 日付とデータ追加ボタンを横並び */
+form.mb-4.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ---------- 検索結果テーブル ---------- */
+.admin__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.admin__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.admin__label {
+  flex: 1;
+  font-weight: bold;
+  color: #555;
+}
+
+.admin__data.no-result {
+  /* flex: 1; */
+  text-align: center;
+  color: gainsboro;
+  font-style: italic;
+  /* padding: 10px 0;
+  transition: background-color 0.3s ease; */
+}
+
+.admin__row:hover .admin__data {
+  background-color: #f5f5f5;
+}
+
+/* 鉛筆ボタン */
+.admin__detail-btn {
+  flex: 0 0 40px;
+  text-align: center;
+}
+
+.admin__detail-btn img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.admin__detail-btn img:hover {
+  transform: scale(1.2);
+}
+
+/* ---------- モーダルウィンドウ ---------- */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+.modal:target {
+  display: block;
+}
+
+.modal__inner {
+  width: 90%;
+  max-width: 600px;
+  margin: 100px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.modal__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* モーダル内フォーム要素調整 */
+.add-form__label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+.add-form__required {
+  color: red;
+  font-size: 0.9em;
+}
+
+.add-form__error-message {
+  color: red;
+  font-size: 0.85em;
+}
+
+.add-form__btn-inner {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.add-form__register-btn {
+  background-color: #555;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+}
+
+.add-form__register-btn:hover {
+  background-color: #333;
+}
+
+.add-form__back-btn {
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  text-decoration: underline;
+}

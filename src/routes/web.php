@@ -20,8 +20,9 @@ Route::get('/register/step2', [WeightLogController::class, 'getStep2']);
 Route::post('/register/step2', [WeightLogController::class, 'postStep2']);
 Route::post('/logout', [WeightLogController::class, 'logout']);
 Route::post('/login', [WeightLogController::class, 'login']);
+Route::get('/login', [WeightLogController::class, 'getLogin']);
 
-Route::middleware(['auth'])->group(function() {
+// Route::middleware(['auth'])->group(function() {
   Route::get('/weight_logs', [WeightLogController::class, 'index']);
   Route::post('/weight_logs/create', [WeightLogController::class, 'create']);
   Route::get('/weight_logs/search', [WeightLogController::class, 'getSearch']);
@@ -31,4 +32,4 @@ Route::middleware(['auth'])->group(function() {
   Route::post('/weight_logs/{:weightLogId}/delete', [WeightLogController::class, 'postDelete']);
   Route::get('/weight_logs/goal_setting', [WeightLogController::class, 'getGoal']);
   Route::post('/weight_logs/goal_setting', [WeightLogController::class, 'postGoal']);
-});
+// });
